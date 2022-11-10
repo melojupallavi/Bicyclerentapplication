@@ -1,0 +1,11 @@
+table{
+    margin-top: 2rem;
+    margin-left:4rem;
+    width: 90%;
+}
+th.mat-header-cell{
+    text-align: center;
+}
+td{
+    text-align: center;
+}

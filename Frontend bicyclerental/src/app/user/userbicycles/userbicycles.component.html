@@ -1,0 +1,16 @@
+<app-userheader [username]="name"></app-userheader>
+      
+<div class="cards-list" *ngFor="let element of Bicycledetails">
+  
+    <div class="card 1">
+      
+     <img src="{{element.url}}" (click)="paymentdetails(element.modelname)">
+     <p>ModelName:{{element.modelname}}</p>
+     <p>Available count:{{element.count}}</p>
+   
+    </div>
+    
+     
+
+    
+    </div>

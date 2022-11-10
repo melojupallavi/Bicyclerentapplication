@@ -1,0 +1,90 @@
+<app-userheader [username]="name"></app-userheader>
+      
+    <div class="row">
+        <div class="col-md-6">
+<div class="cards-list">
+  
+    <div class="card 1">
+     <img  src="{{bicycledetails.url}}" >
+     <hr>
+     <p>ModelName:{{bicycledetails.modelname}}</p>
+     <hr>
+     <p>Available Count:{{bicycledetails.count}}</p>
+    </div> 
+ </div> 
+</div>
+<div class="col-md-6">
+    <div class="row">
+    <form [formGroup]="carddetails" class=" shadow-lg p-3 mb-5 bg-white rounded border p-3 rounded p-3" 
+    (ngSubmit)="onsubmit()">
+        <h3>Booking Details</h3>
+        <div class="row">
+          <div class="col mb-3">
+             <label  for="fromdate"class="form-label">from Date</label>
+             <input  type="date"formControlName="fromdate" class="form-control" placeholder="Fromdate">
+           </div> 
+       
+        <div class="col mb-3">
+           <label  for="todate"class="form-label">to date</label>
+           <input type="date" formControlName="todate" class="form-control" placeholder="to date">
+         </div>
+         
+     </div>
+     <div class="row">
+      <div class="col mb-3">
+         <label  for="modelname"class="form-label">modelname</label>
+         <input formControlName="modelname" class="form-control" placeholder="modelname">
+       </div>
+       <div class="col mb-3">
+        <label  for="count"class="form-label">count</label>
+        <input formControlName="count"   class="form-control" placeholder="count">
+      </div>
+       
+   </div>
+     
+     <div class="row">
+        <div class="col mb-3">
+           <label  for="bookingmoney"class="form-label">bookingmoney</label>
+           <input formControlName="bookingmoney" class="form-control" placeholder="bookingmoney">
+         </div>
+         
+     </div>
+     <hr>
+     <h3>Card Details</h3>
+     <div class="row">
+        <div class="col mb-3">
+           <label  for="cardno"class="form-label">cardno</label>
+           <input formControlName="cardno" class="form-control" placeholder="cardno">
+         </div>
+         
+     
+        <div class="col mb-3">
+           <label  for="nameoncard"class="form-label">nameoncard</label>
+           <input formControlName="nameoncard" class="form-control" placeholder="nameoncard">
+         </div>
+         
+     </div>
+     <div class="row">
+        <div class="col mb-3">
+           <label  for="cvv"class="form-label">cvv</label>
+           <input formControlName="cvv" class="form-control" placeholder="cvv">
+         </div>
+         
+     
+        <div class="col mb-3">
+           <label  for="expirydate"class="form-label">expirydate</label>
+           <input formControlName="expirydate" type="date" class="form-control" placeholder="expirydate">
+         </div>
+         
+     </div>
+       <div class="row">
+        <div class="col-6 offset-3">
+          <div class="d-grid">
+           <button class="btn btn-primary ">Submit</button>
+          </div>
+        </div>
+      </div>
+  </form>
+
+    
+  </div>

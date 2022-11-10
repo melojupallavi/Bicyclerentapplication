@@ -1,0 +1,133 @@
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+  }
+  
+  .card {
+    margin-top: 30px auto;
+    width:30%;
+    height: 16rem;
+   
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 0.2s;
+
+  }
+ 
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 4px;
+    object-fit: cover;
+  } 
+  
+img{
+    border-radius: 4px;
+}
+  
+  
+  p
+  {
+    text-align: center;
+    margin-top: 18px;
+    margin: 3px;;
+    
+  }
+
+  
+  @media all and (max-width: 600px) {
+    .card {
+      /* On small screens, we are no longer using row direction but column */
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 7px;
+    }
+  }
+  
+  
+  p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .card {
+    margin: 30px auto;
+    width: 400px;
+    height: 580px;
+    border-radius: 4px;
+    /* background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+    background-size: cover; */
+   
+  }
+  table{
+    margin-left:4rem;
+    width: 100%;
+    margin-top: 2rem;
+    
+}
+.inside
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.formclass
+{
+    margin-top: 2rem;
+}
+th.mat-header-cell{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+@media screen and (max-width:540x) {
+
+    .inside
+{
+    display:flex;
+    justify-content:space-between;
+    
+}
+    table{
+        width: 80%;
+        margin-right: 1rem;
+        
+        
+    }
+    form{
+        width: 100%;
+       margin-top: 1rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+/* button{
+   
+    
+    padding-left:16px;
+    padding-right:16px;
+    border-radius: 3px;
+} */
+mat-icon:hover{
+    color: red;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form{
+    margin-top: 1.55rem;
+    margin-left: 0.5rem;
+    width: 90%;
+    font-family: 'Times New Roman', Times, serif;
+}
+label
+{ 
+    font-size: 1rem;
+}

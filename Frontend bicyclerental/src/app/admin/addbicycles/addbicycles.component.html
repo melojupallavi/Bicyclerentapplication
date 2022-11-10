@@ -1,0 +1,94 @@
+
+
+
+    <div class="row">
+        <div class="col-md-6">
+    <table  mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+
+        <ng-container matColumnDef="CompanyName">
+          <th mat-header-cell *matHeaderCellDef>CompanyName </th>
+          <td mat-cell *matCellDef="let element">{{element.companyname}}</td>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="Model">
+            <th mat-header-cell *matHeaderCellDef>Model </th>
+            <td mat-cell *matCellDef="let element">{{element.modelname}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Image">
+            <th mat-header-cell *matHeaderCellDef>Image</th>
+            <td mat-cell *matCellDef="let element">
+              <img src="{{element.url}}">
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="Count">
+            <th mat-header-cell *matHeaderCellDef>Count </th>
+            
+            <td mat-cell *matCellDef="let element">
+              <div *ngIf="!element.isedit">{{element.count}}</div>
+              <input type="number" [(ngModel)]="count"      *ngIf="element.isedit">
+            </td>
+          </ng-container>
+
+    
+        <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+
+            <td  mat-cell *matCellDef="let element">
+                <mat-icon (click)="onedit(element)">edit</mat-icon>
+               <mat-icon (click)="ondelete(element.modelname)">delete</mat-icon>
+                </td>
+        </ng-container> 
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <div class="col-md-6">
+        <form [formGroup]="myform" class=" shadow-lg p-3 mb-5 bg-white rounded border p-3 rounded p-3"
+        (ngSubmit)="onsubmit()">
+          <div class="row">
+            <div class="col mb-3">
+               <label  for="companyname"class="form-label">Model Name</label>
+               <input formControlName="modelname" class="form-control" placeholder="Model Name">
+             </div>
+             
+         </div>
+         <div class="row">
+            <div class="col mb-3" >
+               <label  class="form-label">Company Name</label>
+               <br>
+               <select formControlName="companyname" >
+                <option *ngFor="let ele of company">{{ele.companyname}}</option>
+                
+              </select>
+             </div>
+         </div>
+         <br>
+         <div class="row">
+          <div class="col mb-3">
+             <label  for="count"class="form-label">Count</label>
+             <input formControlName="count" class="form-control" placeholder="count">
+           </div>
+           
+       </div>
+      
+     <div class="row">
+      <div class="col mb-3">
+         <label  for="status"class="form-label">Url</label>
+         <input formControlName="url" class="form-control" placeholder="url of image">
+       </div>
+       
+   </div>
+         <div class="row">
+          <div class="col-6 offset-3">
+            <div class="d-grid">
+             <button class="btn btn-primary ">Submit</button>
+            </div>
+          </div>
+        </div>
+    </form>
+</div>
+</div>  
+      

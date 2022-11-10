@@ -1,0 +1,38 @@
+<div class="row">
+<div class="col-md-6">
+    <form [formGroup]="myform" class=" shadow-lg p-3 mb-5 bg-white rounded border p-3 rounded p-3"
+    >
+      <div class="row">
+        <div class="col mb-3">
+           <label  for="companyname"class="form-label">Model Name</label>
+           <input formControlName="modelname" class="form-control" placeholder="Model Name">
+         </div>
+         
+     </div>
+    
+     <br>
+     <div class="row">
+      <div class="col mb-3">
+         <label  for="count"class="form-label">Count</label>
+         <input formControlName="count" class="form-control" placeholder="count">
+       </div>
+       
+   </div>
+   <div class="row">
+    <div class="col mb-3">
+       <label  for="status"class="form-label">Status</label>
+       <input formControlName="status" class="form-control" placeholder="status">
+     </div>
+     
+ </div>
+ 
+     <div class="row">
+      <div class="col-6 offset-3">
+        <div class="d-grid">
+         <button class="btn btn-primary ">Submit</button>
+        </div>
+      </div>
+    </div>
+</form>
+</div>
+</div>  

@@ -1,0 +1,11 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" opened="true">
+    <!-- <mat-drawer mode="side" opened="true"> -->
+    <app-adminsidebar></app-adminsidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-adminheader ></app-adminheader>
+    <app-admincards></app-admincards>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

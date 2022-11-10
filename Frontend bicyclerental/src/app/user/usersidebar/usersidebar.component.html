@@ -1,0 +1,15 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      <!-- <img src="./assets/logo.svg" alt="Company Logo" /> -->
+      <h2 matheader class="mt-2">User</h2>
+    </div>
+    <mat-divider></mat-divider>
+    
+  
+    <a mat-list-item routerLinkActive="list-item-active" (click)="onsubmit(i.companyname)"
+    *ngFor="let i of Bicycledetails">
+      <!-- <mat-icon>motor-cycle</mat-icon>Bicycles -->
+      {{i.companyname}}
+    </a>
+    
+  </mat-nav-list>
